@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.principalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.disciplinasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,7 +56,32 @@
             this.salirDelSistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeSistemaClubSocialCosmopolitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.BottomToolStripPanel = new System.Windows.Forms.ToolStripPanel();
+            this.TopToolStripPanel = new System.Windows.Forms.ToolStripPanel();
+            this.RightToolStripPanel = new System.Windows.Forms.ToolStripPanel();
+            this.LeftToolStripPanel = new System.Windows.Forms.ToolStripPanel();
+            this.ContentPanel = new System.Windows.Forms.ToolStripContentPanel();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.BtnAcercaDe = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.BtnSalir = new System.Windows.Forms.ToolStripButton();
+            this.LblLocalidad = new System.Windows.Forms.ToolStripLabel();
+            this.BtnOpciones = new System.Windows.Forms.ToolStripDropDownButton();
+            this.mostrarEtiquetasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ocultarEtiquetasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
+            this.mostrarEtiquetasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ocultarEtiquetasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.CboModoOscuroClaro = new System.Windows.Forms.ToolStripComboBox();
+            this.StsBarraDeEstado = new System.Windows.Forms.StatusStrip();
+            this.LblEstado = new System.Windows.Forms.ToolStripStatusLabel();
+            this.CmsMenuContextual = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.modoOsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.curoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
+            this.StsBarraDeEstado.SuspendLayout();
+            this.CmsMenuContextual.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -259,18 +285,214 @@
             this.acercaDeSistemaClubSocialCosmopolitaToolStripMenuItem.Text = "Acerca de Sistema Club Social Cosmopolita";
             this.acercaDeSistemaClubSocialCosmopolitaToolStripMenuItem.Click += new System.EventHandler(this.acercaDeSistemaClubSocialCosmopolitaToolStripMenuItem_Click);
             // 
+            // BottomToolStripPanel
+            // 
+            this.BottomToolStripPanel.Location = new System.Drawing.Point(0, 0);
+            this.BottomToolStripPanel.Name = "BottomToolStripPanel";
+            this.BottomToolStripPanel.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.BottomToolStripPanel.RowMargin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.BottomToolStripPanel.Size = new System.Drawing.Size(0, 0);
+            // 
+            // TopToolStripPanel
+            // 
+            this.TopToolStripPanel.Location = new System.Drawing.Point(0, 0);
+            this.TopToolStripPanel.Name = "TopToolStripPanel";
+            this.TopToolStripPanel.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.TopToolStripPanel.RowMargin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.TopToolStripPanel.Size = new System.Drawing.Size(0, 0);
+            // 
+            // RightToolStripPanel
+            // 
+            this.RightToolStripPanel.Location = new System.Drawing.Point(0, 0);
+            this.RightToolStripPanel.Name = "RightToolStripPanel";
+            this.RightToolStripPanel.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.RightToolStripPanel.RowMargin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.RightToolStripPanel.Size = new System.Drawing.Size(0, 0);
+            // 
+            // LeftToolStripPanel
+            // 
+            this.LeftToolStripPanel.Location = new System.Drawing.Point(0, 0);
+            this.LeftToolStripPanel.Name = "LeftToolStripPanel";
+            this.LeftToolStripPanel.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.LeftToolStripPanel.RowMargin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.LeftToolStripPanel.Size = new System.Drawing.Size(0, 0);
+            // 
+            // ContentPanel
+            // 
+            this.ContentPanel.Size = new System.Drawing.Size(682, 355);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BtnAcercaDe,
+            this.toolStripSeparator1,
+            this.BtnSalir,
+            this.LblLocalidad,
+            this.BtnOpciones,
+            this.toolStripSplitButton1,
+            this.CboModoOscuroClaro});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(707, 63);
+            this.toolStrip1.TabIndex = 2;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // BtnAcercaDe
+            // 
+            this.BtnAcercaDe.Image = global::ClubCosmopolita.Properties.Resources.AcercaDe;
+            this.BtnAcercaDe.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.BtnAcercaDe.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnAcercaDe.Name = "BtnAcercaDe";
+            this.BtnAcercaDe.Size = new System.Drawing.Size(72, 60);
+            this.BtnAcercaDe.Text = "Acerca de...";
+            this.BtnAcercaDe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.BtnAcercaDe.Click += new System.EventHandler(this.BtnAcercaDe_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 63);
+            // 
+            // BtnSalir
+            // 
+            this.BtnSalir.Image = global::ClubCosmopolita.Properties.Resources.salir;
+            this.BtnSalir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.BtnSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnSalir.Name = "BtnSalir";
+            this.BtnSalir.Size = new System.Drawing.Size(45, 60);
+            this.BtnSalir.Text = "Salir";
+            this.BtnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
+            // 
+            // LblLocalidad
+            // 
+            this.LblLocalidad.Name = "LblLocalidad";
+            this.LblLocalidad.Size = new System.Drawing.Size(111, 60);
+            this.LblLocalidad.Text = "San Justo - Santa Fe";
+            // 
+            // BtnOpciones
+            // 
+            this.BtnOpciones.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mostrarEtiquetasToolStripMenuItem,
+            this.ocultarEtiquetasToolStripMenuItem});
+            this.BtnOpciones.Image = global::ClubCosmopolita.Properties.Resources.opciones;
+            this.BtnOpciones.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.BtnOpciones.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnOpciones.Name = "BtnOpciones";
+            this.BtnOpciones.Size = new System.Drawing.Size(70, 60);
+            this.BtnOpciones.Text = "Opciones";
+            this.BtnOpciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // mostrarEtiquetasToolStripMenuItem
+            // 
+            this.mostrarEtiquetasToolStripMenuItem.Name = "mostrarEtiquetasToolStripMenuItem";
+            this.mostrarEtiquetasToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.mostrarEtiquetasToolStripMenuItem.Text = "Mostrar etiquetas ";
+            this.mostrarEtiquetasToolStripMenuItem.Click += new System.EventHandler(this.mostrarEtiquetasToolStripMenuItem_Click);
+            // 
+            // ocultarEtiquetasToolStripMenuItem
+            // 
+            this.ocultarEtiquetasToolStripMenuItem.Name = "ocultarEtiquetasToolStripMenuItem";
+            this.ocultarEtiquetasToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.ocultarEtiquetasToolStripMenuItem.Text = "Ocultar etiquetas";
+            this.ocultarEtiquetasToolStripMenuItem.Click += new System.EventHandler(this.ocultarEtiquetasToolStripMenuItem_Click);
+            // 
+            // toolStripSplitButton1
+            // 
+            this.toolStripSplitButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mostrarEtiquetasToolStripMenuItem1,
+            this.ocultarEtiquetasToolStripMenuItem1});
+            this.toolStripSplitButton1.Image = global::ClubCosmopolita.Properties.Resources.opciones;
+            this.toolStripSplitButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
+            this.toolStripSplitButton1.Size = new System.Drawing.Size(73, 60);
+            this.toolStripSplitButton1.Text = "Opciones";
+            this.toolStripSplitButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripSplitButton1.ToolTipText = "Opciones";
+            // 
+            // mostrarEtiquetasToolStripMenuItem1
+            // 
+            this.mostrarEtiquetasToolStripMenuItem1.Name = "mostrarEtiquetasToolStripMenuItem1";
+            this.mostrarEtiquetasToolStripMenuItem1.Size = new System.Drawing.Size(166, 22);
+            this.mostrarEtiquetasToolStripMenuItem1.Text = "Mostrar etiquetas";
+            this.mostrarEtiquetasToolStripMenuItem1.Click += new System.EventHandler(this.mostrarEtiquetasToolStripMenuItem1_Click);
+            // 
+            // ocultarEtiquetasToolStripMenuItem1
+            // 
+            this.ocultarEtiquetasToolStripMenuItem1.Name = "ocultarEtiquetasToolStripMenuItem1";
+            this.ocultarEtiquetasToolStripMenuItem1.Size = new System.Drawing.Size(166, 22);
+            this.ocultarEtiquetasToolStripMenuItem1.Text = "Ocultar etiquetas";
+            this.ocultarEtiquetasToolStripMenuItem1.Click += new System.EventHandler(this.ocultarEtiquetasToolStripMenuItem1_Click);
+            // 
+            // CboModoOscuroClaro
+            // 
+            this.CboModoOscuroClaro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CboModoOscuroClaro.Items.AddRange(new object[] {
+            "Modo claro",
+            "Modo oscuro"});
+            this.CboModoOscuroClaro.Name = "CboModoOscuroClaro";
+            this.CboModoOscuroClaro.Size = new System.Drawing.Size(121, 63);
+            this.CboModoOscuroClaro.SelectedIndexChanged += new System.EventHandler(this.CboModoOscuroClaro_SelectedIndexChanged);
+            // 
+            // StsBarraDeEstado
+            // 
+            this.StsBarraDeEstado.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.LblEstado});
+            this.StsBarraDeEstado.Location = new System.Drawing.Point(0, 382);
+            this.StsBarraDeEstado.Name = "StsBarraDeEstado";
+            this.StsBarraDeEstado.Size = new System.Drawing.Size(707, 22);
+            this.StsBarraDeEstado.TabIndex = 3;
+            this.StsBarraDeEstado.Text = "statusStrip1";
+            // 
+            // LblEstado
+            // 
+            this.LblEstado.Name = "LblEstado";
+            this.LblEstado.Size = new System.Drawing.Size(68, 17);
+            this.LblEstado.Text = "Modo claro";
+            // 
+            // CmsMenuContextual
+            // 
+            this.CmsMenuContextual.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.curoToolStripMenuItem,
+            this.modoOsToolStripMenuItem});
+            this.CmsMenuContextual.Name = "CmsMenuContextual";
+            this.CmsMenuContextual.Size = new System.Drawing.Size(146, 48);
+            // 
+            // modoOsToolStripMenuItem
+            // 
+            this.modoOsToolStripMenuItem.Name = "modoOsToolStripMenuItem";
+            this.modoOsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modoOsToolStripMenuItem.Text = "Modo oscuro";
+            this.modoOsToolStripMenuItem.Click += new System.EventHandler(this.modoOsToolStripMenuItem_Click);
+            // 
+            // curoToolStripMenuItem
+            // 
+            this.curoToolStripMenuItem.Name = "curoToolStripMenuItem";
+            this.curoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.curoToolStripMenuItem.Text = "Modo claro";
+            this.curoToolStripMenuItem.Click += new System.EventHandler(this.curoToolStripMenuItem_Click);
+            // 
             // FrmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(707, 404);
+            this.Controls.Add(this.StsBarraDeEstado);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmMenuPrincipal";
             this.Text = "Sistema Club Social Cosmopolita";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.FrmMenuPrincipal_MouseClick);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
+            this.StsBarraDeEstado.ResumeLayout(false);
+            this.StsBarraDeEstado.PerformLayout();
+            this.CmsMenuContextual.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -304,5 +526,27 @@
         private ToolStripMenuItem salirDelSistemaToolStripMenuItem;
         private ToolStripMenuItem acercaDeToolStripMenuItem;
         private ToolStripMenuItem acercaDeSistemaClubSocialCosmopolitaToolStripMenuItem;
+        private ToolStripPanel BottomToolStripPanel;
+        private ToolStripPanel TopToolStripPanel;
+        private ToolStripPanel RightToolStripPanel;
+        private ToolStripPanel LeftToolStripPanel;
+        private ToolStripContentPanel ContentPanel;
+        private ToolStrip toolStrip1;
+        private ToolStripButton BtnAcercaDe;
+        private ToolStripSeparator toolStripSeparator1;
+        private ToolStripButton BtnSalir;
+        private ToolStripLabel LblLocalidad;
+        private ToolStripDropDownButton BtnOpciones;
+        private ToolStripMenuItem mostrarEtiquetasToolStripMenuItem;
+        private ToolStripMenuItem ocultarEtiquetasToolStripMenuItem;
+        private ToolStripSplitButton toolStripSplitButton1;
+        private ToolStripMenuItem mostrarEtiquetasToolStripMenuItem1;
+        private ToolStripMenuItem ocultarEtiquetasToolStripMenuItem1;
+        private ToolStripComboBox CboModoOscuroClaro;
+        private StatusStrip StsBarraDeEstado;
+        private ToolStripStatusLabel LblEstado;
+        private ContextMenuStrip CmsMenuContextual;
+        private ToolStripMenuItem modoOsToolStripMenuItem;
+        private ToolStripMenuItem curoToolStripMenuItem;
     }
 }
