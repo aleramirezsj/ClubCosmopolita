@@ -1,3 +1,5 @@
+using ClubCosmopolita.Presentación;
+
 namespace ClubCosmopolita
 {
     public partial class FrmMenuPrincipal : Form
@@ -97,6 +99,12 @@ namespace ClubCosmopolita
                 
                 CmsMenuContextual.Show(MousePosition);
             }
+        }
+
+        private void nuevoCobradorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frmNuevoEditarCobrador = new FrmNuevoEditarCobrador();
+            frmNuevoEditarCobrador.ShowDialog();
         }
     }
 }

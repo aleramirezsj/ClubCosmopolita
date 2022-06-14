@@ -76,8 +76,8 @@
             this.StsBarraDeEstado = new System.Windows.Forms.StatusStrip();
             this.LblEstado = new System.Windows.Forms.ToolStripStatusLabel();
             this.CmsMenuContextual = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.modoOsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.curoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modoOsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.StsBarraDeEstado.SuspendLayout();
@@ -112,20 +112,20 @@
             this.listadoToolStripMenuItem,
             this.nuevaDisciplinaToolStripMenuItem});
             this.disciplinasToolStripMenuItem.Name = "disciplinasToolStripMenuItem";
-            this.disciplinasToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.disciplinasToolStripMenuItem.Text = "Disciplinas";
+            this.disciplinasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.disciplinasToolStripMenuItem.Text = "Actividades";
             // 
             // listadoToolStripMenuItem
             // 
             this.listadoToolStripMenuItem.Name = "listadoToolStripMenuItem";
-            this.listadoToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.listadoToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.listadoToolStripMenuItem.Text = "Listado";
             // 
             // nuevaDisciplinaToolStripMenuItem
             // 
             this.nuevaDisciplinaToolStripMenuItem.Name = "nuevaDisciplinaToolStripMenuItem";
-            this.nuevaDisciplinaToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.nuevaDisciplinaToolStripMenuItem.Text = "Nueva Disciplina";
+            this.nuevaDisciplinaToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.nuevaDisciplinaToolStripMenuItem.Text = "Nueva Actividad";
             // 
             // sociosToolStripMenuItem
             // 
@@ -133,7 +133,7 @@
             this.listadoToolStripMenuItem1,
             this.nuevoSocioToolStripMenuItem});
             this.sociosToolStripMenuItem.Name = "sociosToolStripMenuItem";
-            this.sociosToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.sociosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sociosToolStripMenuItem.Text = "Socios";
             // 
             // listadoToolStripMenuItem1
@@ -154,20 +154,21 @@
             this.listadoToolStripMenuItem2,
             this.nuevoCobradorToolStripMenuItem});
             this.cobradoresToolStripMenuItem.Name = "cobradoresToolStripMenuItem";
-            this.cobradoresToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.cobradoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cobradoresToolStripMenuItem.Text = "Cobradores";
             // 
             // listadoToolStripMenuItem2
             // 
             this.listadoToolStripMenuItem2.Name = "listadoToolStripMenuItem2";
-            this.listadoToolStripMenuItem2.Size = new System.Drawing.Size(162, 22);
+            this.listadoToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.listadoToolStripMenuItem2.Text = "Listado";
             // 
             // nuevoCobradorToolStripMenuItem
             // 
             this.nuevoCobradorToolStripMenuItem.Name = "nuevoCobradorToolStripMenuItem";
-            this.nuevoCobradorToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.nuevoCobradorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nuevoCobradorToolStripMenuItem.Text = "Nuevo Cobrador";
+            this.nuevoCobradorToolStripMenuItem.Click += new System.EventHandler(this.nuevoCobradorToolStripMenuItem_Click);
             // 
             // utilidadesToolStripMenuItem
             // 
@@ -459,19 +460,19 @@
             this.CmsMenuContextual.Name = "CmsMenuContextual";
             this.CmsMenuContextual.Size = new System.Drawing.Size(146, 48);
             // 
-            // modoOsToolStripMenuItem
-            // 
-            this.modoOsToolStripMenuItem.Name = "modoOsToolStripMenuItem";
-            this.modoOsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.modoOsToolStripMenuItem.Text = "Modo oscuro";
-            this.modoOsToolStripMenuItem.Click += new System.EventHandler(this.modoOsToolStripMenuItem_Click);
-            // 
             // curoToolStripMenuItem
             // 
             this.curoToolStripMenuItem.Name = "curoToolStripMenuItem";
-            this.curoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.curoToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.curoToolStripMenuItem.Text = "Modo claro";
             this.curoToolStripMenuItem.Click += new System.EventHandler(this.curoToolStripMenuItem_Click);
+            // 
+            // modoOsToolStripMenuItem
+            // 
+            this.modoOsToolStripMenuItem.Name = "modoOsToolStripMenuItem";
+            this.modoOsToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.modoOsToolStripMenuItem.Text = "Modo oscuro";
+            this.modoOsToolStripMenuItem.Click += new System.EventHandler(this.modoOsToolStripMenuItem_Click);
             // 
             // FrmMenuPrincipal
             // 
