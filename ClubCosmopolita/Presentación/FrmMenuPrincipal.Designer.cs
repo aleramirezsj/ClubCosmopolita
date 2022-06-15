@@ -118,14 +118,15 @@
             // listadoToolStripMenuItem
             // 
             this.listadoToolStripMenuItem.Name = "listadoToolStripMenuItem";
-            this.listadoToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.listadoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.listadoToolStripMenuItem.Text = "Listado";
             // 
             // nuevaDisciplinaToolStripMenuItem
             // 
             this.nuevaDisciplinaToolStripMenuItem.Name = "nuevaDisciplinaToolStripMenuItem";
-            this.nuevaDisciplinaToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.nuevaDisciplinaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nuevaDisciplinaToolStripMenuItem.Text = "Nueva Actividad";
+            this.nuevaDisciplinaToolStripMenuItem.Click += new System.EventHandler(this.nuevaDisciplinaToolStripMenuItem_Click);
             // 
             // sociosToolStripMenuItem
             // 
@@ -160,13 +161,13 @@
             // listadoToolStripMenuItem2
             // 
             this.listadoToolStripMenuItem2.Name = "listadoToolStripMenuItem2";
-            this.listadoToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.listadoToolStripMenuItem2.Size = new System.Drawing.Size(162, 22);
             this.listadoToolStripMenuItem2.Text = "Listado";
             // 
             // nuevoCobradorToolStripMenuItem
             // 
             this.nuevoCobradorToolStripMenuItem.Name = "nuevoCobradorToolStripMenuItem";
-            this.nuevoCobradorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nuevoCobradorToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.nuevoCobradorToolStripMenuItem.Text = "Nuevo Cobrador";
             this.nuevoCobradorToolStripMenuItem.Click += new System.EventHandler(this.nuevoCobradorToolStripMenuItem_Click);
             // 

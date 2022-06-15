@@ -106,5 +106,11 @@ namespace ClubCosmopolita
             var frmNuevoEditarCobrador = new FrmNuevoEditarCobrador();
             frmNuevoEditarCobrador.ShowDialog();
         }
+
+        private void nuevaDisciplinaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frmNuevoEditarActividad = new FrmNuevoEditarActividad();
+            frmNuevoEditarActividad.ShowDialog();
+        }
     }
 }
