@@ -112,5 +112,11 @@ namespace ClubCosmopolita
             var frmNuevoEditarActividad = new FrmNuevoEditarActividad();
             frmNuevoEditarActividad.ShowDialog();
         }
+
+        private void listadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frmListadoActividades = new FrmListadoDeActividades();
+            frmListadoActividades.ShowDialog();
+        }
     }
 }
