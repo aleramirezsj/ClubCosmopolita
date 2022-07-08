@@ -9,6 +9,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Update="Presentación\FrmListadoDeCobradores.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Presentación\FrmNuevoEditarActividad.cs">
       <SubType>Form</SubType>
     </Compile>

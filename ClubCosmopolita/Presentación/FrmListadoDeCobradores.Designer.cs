@@ -1,6 +1,6 @@
 ﻿namespace ClubCosmopolita.Presentación
 {
-    partial class FrmListadoDeActividades
+    partial class FrmListadoDeCobradores
     {
         /// <summary>
         /// Required designer variable.
@@ -28,32 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.GrdActividades = new System.Windows.Forms.DataGridView();
+            this.GrdCobradores = new System.Windows.Forms.DataGridView();
             this.BtnNuevo = new System.Windows.Forms.Button();
             this.BtnSalir = new System.Windows.Forms.Button();
             this.TxtBusqueda = new System.Windows.Forms.TextBox();
             this.LblBuscar = new System.Windows.Forms.Label();
             this.BtnModificar = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.GrdActividades)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GrdCobradores)).BeginInit();
             this.SuspendLayout();
             // 
-            // GrdActividades
+            // GrdCobradores
             // 
-            this.GrdActividades.AllowUserToAddRows = false;
-            this.GrdActividades.AllowUserToDeleteRows = false;
-            this.GrdActividades.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.GrdCobradores.AllowUserToAddRows = false;
+            this.GrdCobradores.AllowUserToDeleteRows = false;
+            this.GrdCobradores.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.GrdActividades.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.GrdActividades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GrdActividades.Location = new System.Drawing.Point(12, 12);
-            this.GrdActividades.Name = "GrdActividades";
-            this.GrdActividades.ReadOnly = true;
-            this.GrdActividades.RowTemplate.Height = 25;
-            this.GrdActividades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GrdActividades.Size = new System.Drawing.Size(578, 195);
-            this.GrdActividades.TabIndex = 0;
+            this.GrdCobradores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.GrdCobradores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GrdCobradores.Location = new System.Drawing.Point(12, 12);
+            this.GrdCobradores.Name = "GrdCobradores";
+            this.GrdCobradores.ReadOnly = true;
+            this.GrdCobradores.RowTemplate.Height = 25;
+            this.GrdCobradores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.GrdCobradores.Size = new System.Drawing.Size(578, 195);
+            this.GrdCobradores.TabIndex = 0;
             // 
             // BtnNuevo
             // 
@@ -126,7 +126,7 @@
             this.BtnEliminar.UseVisualStyleBackColor = true;
             this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
-            // FrmListadoDeActividades
+            // FrmListadoDeCobradores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -137,11 +137,11 @@
             this.Controls.Add(this.TxtBusqueda);
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.BtnNuevo);
-            this.Controls.Add(this.GrdActividades);
-            this.Name = "FrmListadoDeActividades";
+            this.Controls.Add(this.GrdCobradores);
+            this.Name = "FrmListadoDeCobradores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Listado de actividades";
-            ((System.ComponentModel.ISupportInitialize)(this.GrdActividades)).EndInit();
+            this.Text = "Listado de cobradores";
+            ((System.ComponentModel.ISupportInitialize)(this.GrdCobradores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,7 +149,7 @@
 
         #endregion
 
-        private DataGridView GrdActividades;
+        private DataGridView GrdCobradores;
         private Button BtnNuevo;
         private Button BtnSalir;
         private TextBox TxtBusqueda;

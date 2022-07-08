@@ -118,5 +118,17 @@ namespace ClubCosmopolita
             var frmListadoActividades = new FrmListadoDeActividades();
             frmListadoActividades.ShowDialog();
         }
+
+        private void listadoToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            var frmListadoCobradores = new FrmListadoDeCobradores();
+            frmListadoCobradores.ShowDialog();
+        }
+
+        private void listado2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frmListado2Actividades = new FrmActividades2();
+            frmListado2Actividades.ShowDialog();
+        }
     }
 }

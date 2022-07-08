@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace ClubCosmopolita.Presentación
 {
-    public partial class FrmListadoDeActividades : Form
+    public partial class FrmListadoDeCobradores : Form
     {
-        public FrmListadoDeActividades()
+        public FrmListadoDeCobradores()
         {
             InitializeComponent();
             ActualizarGrilla();
@@ -25,10 +25,10 @@ namespace ClubCosmopolita.Presentación
             var db = new CosmopolitaContext();
 
             //traemos la lista de actividades
-            var listaActividades= db.Actividades.ToList();
+            var listaCobradores= db.Cobradores.ToList();
 
             //la asignamos a la grilla
-            GrdActividades.DataSource=listaActividades;
+            GrdCobradores.DataSource= listaCobradores;
 
             
             //las 3 líneas pueden estar en una sola expresión
@@ -37,8 +37,8 @@ namespace ClubCosmopolita.Presentación
 
         private void BtnNuevo_Click(object sender, EventArgs e)
         {
-            var frmNuevoEditarActividad = new FrmNuevoEditarActividad();
-            frmNuevoEditarActividad.ShowDialog();
+            var frmNuevoEditarCobrador = new FrmNuevoEditarCobrador();
+            frmNuevoEditarCobrador.ShowDialog();
             ActualizarGrilla();
         }
 
@@ -58,29 +58,29 @@ namespace ClubCosmopolita.Presentación
             var db = new CosmopolitaContext();
 
             //traemos la lista de actividades
-            var listaActividades = db.Actividades.Where(a=>a.Nombre.Contains(cadenaDeBusqueda)).ToList();
+            var listaCobradores = db.Cobradores.Where(a=>a.Apellido_Nombre.Contains(cadenaDeBusqueda)).ToList();
 
             //la asignamos a la grilla
-            GrdActividades.DataSource = listaActividades;
+            GrdCobradores.DataSource = listaCobradores;
         }
 
         private void BtnModificar_Click(object sender, EventArgs e)
         {
             //obtenemos el id de la fila seleccionada
-            var idActividad =(int) GrdActividades.CurrentRow.Cells[0].Value;
-            var frmNuevoEditarActividad = new FrmNuevoEditarActividad(idActividad);
-            frmNuevoEditarActividad.ShowDialog();
+            var idCobrador =(int) GrdCobradores.CurrentRow.Cells[0].Value;
+            var frmNuevoEditarCobrador = new FrmNuevoEditarCobrador(idCobrador);
+            frmNuevoEditarCobrador.ShowDialog();
             ActualizarGrilla();
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
             //obtenemos el id y nombre de la actividad seleccionada
-            var idActividad = (int)GrdActividades.CurrentRow.Cells[0].Value;
-            var nombreActividad= (string)GrdActividades.CurrentRow.Cells[1].Value;
+            var idCobrador = (int)GrdCobradores.CurrentRow.Cells[0].Value;
+            var nombreCobrador= (string)GrdCobradores.CurrentRow.Cells[1].Value;
 
             //preguntamos al usuario si está seguro que quiere borrar
-            DialogResult respuesta = MessageBox.Show($"¿Deseas eliminar la actividad {nombreActividad}?","Eliminar actividad",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+            DialogResult respuesta = MessageBox.Show($"¿Deseas eliminar al cobrador {nombreCobrador}?","Eliminar cobrador",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
             
             //si contestó que si, borramos la actividad
             if(respuesta == DialogResult.Yes)
@@ -89,10 +89,10 @@ namespace ClubCosmopolita.Presentación
                 var db = new CosmopolitaContext();
 
                 //obtenemos la actividad a borrar
-                var actividadABorrar = db.Actividades.Find(idActividad);
+                var cobradorABorrar = db.Cobradores.Find(idCobrador);
 
                 //borramos la actividad
-                db.Actividades.Remove(actividadABorrar);
+                db.Cobradores.Remove(cobradorABorrar);
 
                 //guardamos los cambios
                 db.SaveChanges();

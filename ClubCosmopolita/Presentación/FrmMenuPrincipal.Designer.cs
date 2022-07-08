@@ -78,6 +78,7 @@
             this.CmsMenuContextual = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.curoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modoOsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listado2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.StsBarraDeEstado.SuspendLayout();
@@ -110,7 +111,8 @@
             // 
             this.disciplinasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.listadoToolStripMenuItem,
-            this.nuevaDisciplinaToolStripMenuItem});
+            this.nuevaDisciplinaToolStripMenuItem,
+            this.listado2ToolStripMenuItem});
             this.disciplinasToolStripMenuItem.Name = "disciplinasToolStripMenuItem";
             this.disciplinasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.disciplinasToolStripMenuItem.Text = "Actividades";
@@ -118,14 +120,14 @@
             // listadoToolStripMenuItem
             // 
             this.listadoToolStripMenuItem.Name = "listadoToolStripMenuItem";
-            this.listadoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listadoToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
             this.listadoToolStripMenuItem.Text = "Listado";
             this.listadoToolStripMenuItem.Click += new System.EventHandler(this.listadoToolStripMenuItem_Click);
             // 
             // nuevaDisciplinaToolStripMenuItem
             // 
             this.nuevaDisciplinaToolStripMenuItem.Name = "nuevaDisciplinaToolStripMenuItem";
-            this.nuevaDisciplinaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nuevaDisciplinaToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
             this.nuevaDisciplinaToolStripMenuItem.Text = "Nueva Actividad";
             this.nuevaDisciplinaToolStripMenuItem.Click += new System.EventHandler(this.nuevaDisciplinaToolStripMenuItem_Click);
             // 
@@ -164,6 +166,7 @@
             this.listadoToolStripMenuItem2.Name = "listadoToolStripMenuItem2";
             this.listadoToolStripMenuItem2.Size = new System.Drawing.Size(162, 22);
             this.listadoToolStripMenuItem2.Text = "Listado";
+            this.listadoToolStripMenuItem2.Click += new System.EventHandler(this.listadoToolStripMenuItem2_Click);
             // 
             // nuevoCobradorToolStripMenuItem
             // 
@@ -476,6 +479,13 @@
             this.modoOsToolStripMenuItem.Text = "Modo oscuro";
             this.modoOsToolStripMenuItem.Click += new System.EventHandler(this.modoOsToolStripMenuItem_Click);
             // 
+            // listado2ToolStripMenuItem
+            // 
+            this.listado2ToolStripMenuItem.Name = "listado2ToolStripMenuItem";
+            this.listado2ToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.listado2ToolStripMenuItem.Text = "Listado diseño alternativo";
+            this.listado2ToolStripMenuItem.Click += new System.EventHandler(this.listado2ToolStripMenuItem_Click);
+            // 
             // FrmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -551,5 +561,6 @@
         private ContextMenuStrip CmsMenuContextual;
         private ToolStripMenuItem modoOsToolStripMenuItem;
         private ToolStripMenuItem curoToolStripMenuItem;
+        private ToolStripMenuItem listado2ToolStripMenuItem;
     }
 }
