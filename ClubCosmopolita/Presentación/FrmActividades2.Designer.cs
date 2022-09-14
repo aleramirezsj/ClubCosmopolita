@@ -153,6 +153,7 @@
             this.BtnBuscar.TabIndex = 28;
             this.BtnBuscar.Text = "&Buscar";
             this.BtnBuscar.UseVisualStyleBackColor = true;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // BtnNueva
             // 
@@ -172,6 +173,7 @@
             this.BtnModificar.TabIndex = 30;
             this.BtnModificar.Text = "&Modificar";
             this.BtnModificar.UseVisualStyleBackColor = true;
+            this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
             // BtnEliminar
             // 

@@ -1,13 +1,16 @@
+using ClubCosmopolita.Modelos;
 using ClubCosmopolita.Presentación;
 
 namespace ClubCosmopolita
 {
     public partial class FrmMenuPrincipal : Form
     {
+        public static Usuario UsuarioLogueado { get; set; }
         public FrmMenuPrincipal()
         {
             InitializeComponent();
             CboModoOscuroClaro.SelectedIndex = 0;
+            
         }
 
         private void salirDelSistemaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -129,6 +132,40 @@ namespace ClubCosmopolita
         {
             var frmListado2Actividades = new FrmActividades2();
             frmListado2Actividades.ShowDialog();
+        }
+
+        private void FrmMenuPrincipal_Activated(object sender, EventArgs e)
+        {
+            //si no hay un usuario logueado
+            if (UsuarioLogueado==null)
+            {
+                //instanciamos el formulario FrmLogin
+                var frmLogin = new FrmLogin();
+                //mostramos el formulario en modo Modal
+                //(está por encima de todo)
+                frmLogin.ShowDialog();
+                //luego de salir del formulario login
+                //chequeamos si se almaceno en la propiedad UsuarioLogueado a algún usuario
+                if(UsuarioLogueado==null)
+                    Application.Exit();
+            }
+        }
+
+        private void FrmMenuPrincipal_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void impresiónListaDeSociosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frmReporteSocios=new FrmReporteSocios();
+            frmReporteSocios.ShowDialog();  
+        }
+
+        private void impresiónListadoDeActividadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frmReporteActidades = new FrmReporteActividades();
+            frmReporteActidades.ShowDialog();
         }
     }
 }

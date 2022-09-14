@@ -1,5 +1,6 @@
 ﻿using ClubCosmopolita.Data;
 using ClubCosmopolita.Modelos;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -142,7 +143,16 @@ namespace ClubCosmopolita.Presentación
             }
             else
             {
+                actividadActual.Nombre = TxtNombre.Text;
+                actividadActual.Horarios = txtHorarios.Text;
+                actividadActual.Costo = nudCosto.Value;
+                if (actividadActual.Id == 0)
+                    db.Actividades.Add(actividadActual);
+                else
+                    db.Entry(actividadActual).State=EntityState.Modified;
+                db.SaveChanges();
                 ModoEdicion(false);
+                HabilitarDeshabilitarBotones();
             }
         }
 
@@ -159,6 +169,22 @@ namespace ClubCosmopolita.Presentación
             BtnEliminar.Enabled = !valor;
             BtnNueva.Text = valor ? "&Guardar" : "&Nueva";
             BtnModificar.Text = valor ? "&Cancelar" : "&Modificar";
+        }
+
+        private void BtnModificar_Click(object sender, EventArgs e)
+        {
+            if (BtnModificar.Text == "&Modificar")
+                ModoEdicion(true);
+            else
+                ModoEdicion(false);
+        }
+
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
+            var frmBuscarActividades = new FrmBuscarActividades();
+            frmBuscarActividades.ShowDialog();
+            actividadActual = db.Actividades.Find(frmBuscarActividades.idActividadSeleccionada);
+            CargarDatosActividad();
         }
     }
 }

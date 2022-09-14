@@ -40,6 +40,22 @@ namespace ClubCosmopolita.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Actividades");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Costo = 2000m,
+                            Horarios = "Martes y Jueves 20hs",
+                            Nombre = "Folklore"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Costo = 2500m,
+                            Horarios = "Lunes y miércoles 15:00hs2",
+                            Nombre = "Telas"
+                        });
                 });
 
             modelBuilder.Entity("ClubCosmopolita.Modelos.Cobrador", b =>
@@ -56,6 +72,18 @@ namespace ClubCosmopolita.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Cobradores");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Apellido_Nombre = "Juárez, Tomás"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Apellido_Nombre = "Acevedo, Lautaro"
+                        });
                 });
 
             modelBuilder.Entity("ClubCosmopolita.Modelos.Cuota", b =>
@@ -120,6 +148,59 @@ namespace ClubCosmopolita.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Socios");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Apellido_Nombre = "Acevedo Lautaro",
+                            Dirección = "San Justo",
+                            Teléfono = "3498345345"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Apellido_Nombre = "Lescano Marcos",
+                            Dirección = "San Justo",
+                            Teléfono = "3498324870"
+                        });
+                });
+
+            modelBuilder.Entity("ClubCosmopolita.Modelos.Usuario", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TipoUsuario")
+                        .HasColumnType("int");
+
+                    b.Property<string>("User")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Usuarios");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Nombre = "Adminitrador",
+                            Password = "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+                            TipoUsuario = 2,
+                            User = "admin"
+                        });
                 });
 
             modelBuilder.Entity("ClubCosmopolita.Modelos.Cuota", b =>
