@@ -1,4 +1,6 @@
-﻿namespace ClubCosmopolita.Presentación
+﻿using System.Windows.Forms;
+
+namespace ClubCosmopolita.Presentación
 {
     partial class FrmNuevoEditarCobrador
     {

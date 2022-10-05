@@ -63,6 +63,16 @@ namespace ClubCosmopolita.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _4XOXHV7 {
+            get {
+                object obj = ResourceManager.GetObject("4XOXHV7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap AcercaDe {
             get {
                 object obj = ResourceManager.GetObject("AcercaDe", resourceCulture);

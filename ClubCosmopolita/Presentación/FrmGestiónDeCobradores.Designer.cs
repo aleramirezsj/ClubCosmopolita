@@ -1,6 +1,8 @@
-﻿namespace ClubCosmopolita.Presentación
+﻿using System.Windows.Forms;
+
+namespace ClubCosmopolita.Presentación
 {
-    partial class FrmListadoDeCobradores
+    partial class FrmGestiónDeCobradores
     {
         /// <summary>
         /// Required designer variable.

@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace ClubCosmopolita.Presentación
 {
-    public partial class FrmReporteSocios : Form
+    public partial class FrmListadoSocios : Form
     {
         ReportViewer reporte = new ReportViewer();
         CosmopolitaContext db = new CosmopolitaContext();
-        public FrmReporteSocios()
+        public FrmListadoSocios()
         {
             InitializeComponent();
             reporte.Dock = DockStyle.Fill;
@@ -27,7 +27,7 @@ namespace ClubCosmopolita.Presentación
         private void FrmReporteSocios_Load(object sender, EventArgs e)
         {
             reporte.LocalReport.ReportEmbeddedResource = "ClubCosmopolita.Reportes.RptListadoSocios.rdlc";
-            var socios = db.Socios.ToList();
+            var socios = db.Socios.OrderBy(s=>s.Apellido_Nombre).ToList();
             reporte.LocalReport.DataSources.Add(new ReportDataSource("DSSocios",socios));
             
             reporte.RefreshReport();

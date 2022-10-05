@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace ClubCosmopolita.Presentación
 {
-    public partial class FrmListadoDeSocios : Form
+    public partial class FrmGestiónDeSocios : Form
     {
-        public FrmListadoDeSocios()
+        public FrmGestiónDeSocios()
         {
             InitializeComponent();
             ActualizarGrilla();

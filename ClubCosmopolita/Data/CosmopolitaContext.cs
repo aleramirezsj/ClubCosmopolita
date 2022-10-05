@@ -88,7 +88,8 @@ namespace ClubCosmopolita.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //optionsBuilder.UseSqlServer(@"Data Source =.\SQLEXPRESS; Initial Catalog = CosmopolitaContext; User Id = sa; Password = 123; MultipleActiveResultSets = True");
-            optionsBuilder.UseSqlServer(@"Server=.\SQLEXPRESS; Database=CosmopolitaContext; Integrated Security=True;");
+            //optionsBuilder.UseSqlServer(@"Server=.\SQLEXPRESS; Database=CosmopolitaContext; Integrated Security=True;");
+            optionsBuilder.UseMySQL("Server=184.175.77.148;Database=smartsof_2doTSDS2022;Uid=smartsof_2doTSDS;Pwd=2doTSDS;");
         }
 
         #region Declaración de los DbSets

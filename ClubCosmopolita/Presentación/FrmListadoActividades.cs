@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace ClubCosmopolita.Presentación
 {
-    public partial class FrmReporteActividades : Form
+    public partial class FrmListadoActividades : Form
     {
         CosmopolitaContext db = new CosmopolitaContext();
         ReportViewer reporte = new ReportViewer();
-        public FrmReporteActividades()
+        public FrmListadoActividades()
         {
             InitializeComponent();
             reporte.Dock= DockStyle.Fill;

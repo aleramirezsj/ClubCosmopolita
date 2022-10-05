@@ -2,13 +2,6 @@
 using ClubCosmopolita.Modelos;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ClubCosmopolita.Presentación
@@ -61,7 +54,7 @@ namespace ClubCosmopolita.Presentación
                 actividad.Horarios = txtHorarios.Text;
                 actividad.Costo = nudCosto.Value;
                 //definimos que estamos modificando la actividad
-                db.Entry(actividad).State =EntityState.Modified;
+                db.Entry(actividad).State = EntityState.Modified;
             }
             //guardamos los cambios
             db.SaveChanges();

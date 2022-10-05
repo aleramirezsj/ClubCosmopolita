@@ -1,5 +1,15 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 using ClubCosmopolita.Modelos;
 using ClubCosmopolita.Presentación;
+
 
 namespace ClubCosmopolita
 {
@@ -15,24 +25,17 @@ namespace ClubCosmopolita
 
         private void salirDelSistemaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
         }
 
         private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var texto = "Hecho por: Tomás Benitez";
-            texto += Environment.NewLine;
-            texto += "Materia: Programación 1";
-            texto += Environment.NewLine;
-            texto += "Carrera: TSD Software";
-            var titulo = "Acerca de...";
-            MessageBox.Show(texto, titulo);
+            
         }
 
         private void acercaDeSistemaClubSocialCosmopolitaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmAcercaDe frmAcercaDe = new FrmAcercaDe();
-            frmAcercaDe.ShowDialog();
+           
         }
 
         private void BtnSalir_Click(object sender, EventArgs e)
@@ -118,13 +121,13 @@ namespace ClubCosmopolita
 
         private void listadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var frmListadoActividades = new FrmListadoDeActividades();
+            var frmListadoActividades = new FrmGestiónDeActividades();
             frmListadoActividades.ShowDialog();
         }
 
         private void listadoToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            var frmListadoCobradores = new FrmListadoDeCobradores();
+            var frmListadoCobradores = new FrmGestiónDeCobradores();
             frmListadoCobradores.ShowDialog();
         }
 
@@ -158,14 +161,42 @@ namespace ClubCosmopolita
 
         private void impresiónListaDeSociosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var frmReporteSocios=new FrmReporteSocios();
+            var frmReporteSocios=new FrmListadoSocios();
             frmReporteSocios.ShowDialog();  
         }
 
         private void impresiónListadoDeActividadesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var frmReporteActidades = new FrmReporteActividades();
+            var frmReporteActidades = new FrmListadoActividades();
             frmReporteActidades.ShowDialog();
+        }
+
+        private void iconMenuSalirDelSistema_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void iconMenuAcercaDe_Click(object sender, EventArgs e)
+        {
+            var texto = "Hecho por: Tomás Benitez";
+            texto += Environment.NewLine;
+            texto += "Materia: Programación 1";
+            texto += Environment.NewLine;
+            texto += "Carrera: TSD Software";
+            var titulo = "Acerca de...";
+            MessageBox.Show(texto, titulo);
+        }
+
+        private void iconMenuItem3_Click(object sender, EventArgs e)
+        {
+            FrmAcercaDe frmAcercaDe = new FrmAcercaDe();
+            frmAcercaDe.ShowDialog();
+        }
+
+        private void listadoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var frmGestionSocios = new FrmGestiónDeSocios();
+            frmGestionSocios.ShowDialog();
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace ClubCosmopolita
+﻿using System.Windows.Forms;
+
+namespace ClubCosmopolita
 {
     partial class FrmMenuPrincipal
     {
@@ -29,6 +31,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenuPrincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.principalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.disciplinasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,10 +58,10 @@
             this.resumenDeCuentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cuotasSocietariasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cuotasDeDisciplinasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirDelSistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.acercaDeSistemaClubSocialCosmopolitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.iconMenuSalir = new FontAwesome.Sharp.IconMenuItem();
+            this.iconMenuSalirDelSistema = new FontAwesome.Sharp.IconMenuItem();
+            this.iconMenuAcercaDe = new FontAwesome.Sharp.IconMenuItem();
+            this.iconMenuAcercaDeSistema = new FontAwesome.Sharp.IconMenuItem();
             this.BottomToolStripPanel = new System.Windows.Forms.ToolStripPanel();
             this.TopToolStripPanel = new System.Windows.Forms.ToolStripPanel();
             this.RightToolStripPanel = new System.Windows.Forms.ToolStripPanel();
@@ -81,12 +84,12 @@
             this.CmsMenuContextual = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.curoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modoOsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.iconMenuItem1 = new FontAwesome.Sharp.IconMenuItem();
-            this.iconMenuItem2 = new FontAwesome.Sharp.IconMenuItem();
+            this.pbxLogoClub = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.StsBarraDeEstado.SuspendLayout();
             this.CmsMenuContextual.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogoClub)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -94,8 +97,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.principalToolStripMenuItem,
             this.utilidadesToolStripMenuItem,
-            this.salirToolStripMenuItem,
-            this.iconMenuItem1});
+            this.iconMenuSalir});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(707, 28);
@@ -120,7 +122,7 @@
             this.listado2ToolStripMenuItem,
             this.impresiónListadoDeActividadesToolStripMenuItem});
             this.disciplinasToolStripMenuItem.Name = "disciplinasToolStripMenuItem";
-            this.disciplinasToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.disciplinasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.disciplinasToolStripMenuItem.Text = "Actividades";
             // 
             // listadoToolStripMenuItem
@@ -158,14 +160,15 @@
             this.nuevoSocioToolStripMenuItem,
             this.impresiónListaDeSociosToolStripMenuItem});
             this.sociosToolStripMenuItem.Name = "sociosToolStripMenuItem";
-            this.sociosToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.sociosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sociosToolStripMenuItem.Text = "Socios";
             // 
             // listadoToolStripMenuItem1
             // 
             this.listadoToolStripMenuItem1.Name = "listadoToolStripMenuItem1";
             this.listadoToolStripMenuItem1.Size = new System.Drawing.Size(203, 22);
-            this.listadoToolStripMenuItem1.Text = "Listado";
+            this.listadoToolStripMenuItem1.Text = "Gestión de Socios";
+            this.listadoToolStripMenuItem1.Click += new System.EventHandler(this.listadoToolStripMenuItem1_Click);
             // 
             // nuevoSocioToolStripMenuItem
             // 
@@ -186,7 +189,7 @@
             this.listadoToolStripMenuItem2,
             this.nuevoCobradorToolStripMenuItem});
             this.cobradoresToolStripMenuItem.Name = "cobradoresToolStripMenuItem";
-            this.cobradoresToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.cobradoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cobradoresToolStripMenuItem.Text = "Cobradores";
             // 
             // listadoToolStripMenuItem2
@@ -288,36 +291,56 @@
             this.cuotasDeDisciplinasToolStripMenuItem1.Size = new System.Drawing.Size(186, 22);
             this.cuotasDeDisciplinasToolStripMenuItem1.Text = "Cuotas de Disciplinas";
             // 
-            // salirToolStripMenuItem
+            // iconMenuSalir
             // 
-            this.salirToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.salirDelSistemaToolStripMenuItem,
-            this.acercaDeToolStripMenuItem,
-            this.acercaDeSistemaClubSocialCosmopolitaToolStripMenuItem});
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 24);
-            this.salirToolStripMenuItem.Text = "Salir";
+            this.iconMenuSalir.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.iconMenuSalirDelSistema,
+            this.iconMenuAcercaDe,
+            this.iconMenuAcercaDeSistema});
+            this.iconMenuSalir.IconChar = FontAwesome.Sharp.IconChar.DoorClosed;
+            this.iconMenuSalir.IconColor = System.Drawing.Color.IndianRed;
+            this.iconMenuSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconMenuSalir.IconSize = 20;
+            this.iconMenuSalir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.iconMenuSalir.Name = "iconMenuSalir";
+            this.iconMenuSalir.Size = new System.Drawing.Size(61, 24);
+            this.iconMenuSalir.Text = "Salir";
             // 
-            // salirDelSistemaToolStripMenuItem
+            // iconMenuSalirDelSistema
             // 
-            this.salirDelSistemaToolStripMenuItem.Name = "salirDelSistemaToolStripMenuItem";
-            this.salirDelSistemaToolStripMenuItem.Size = new System.Drawing.Size(303, 22);
-            this.salirDelSistemaToolStripMenuItem.Text = "Salir del Sistema";
-            this.salirDelSistemaToolStripMenuItem.Click += new System.EventHandler(this.salirDelSistemaToolStripMenuItem_Click);
+            this.iconMenuSalirDelSistema.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
+            this.iconMenuSalirDelSistema.IconColor = System.Drawing.Color.Black;
+            this.iconMenuSalirDelSistema.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconMenuSalirDelSistema.IconSize = 20;
+            this.iconMenuSalirDelSistema.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.iconMenuSalirDelSistema.Name = "iconMenuSalirDelSistema";
+            this.iconMenuSalirDelSistema.Size = new System.Drawing.Size(307, 26);
+            this.iconMenuSalirDelSistema.Text = "Salir del sistema";
+            this.iconMenuSalirDelSistema.Click += new System.EventHandler(this.iconMenuSalirDelSistema_Click);
             // 
-            // acercaDeToolStripMenuItem
+            // iconMenuAcercaDe
             // 
-            this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
-            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(303, 22);
-            this.acercaDeToolStripMenuItem.Text = "Acerca de...";
-            this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
+            this.iconMenuAcercaDe.IconChar = FontAwesome.Sharp.IconChar.AddressBook;
+            this.iconMenuAcercaDe.IconColor = System.Drawing.Color.Black;
+            this.iconMenuAcercaDe.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconMenuAcercaDe.IconSize = 20;
+            this.iconMenuAcercaDe.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.iconMenuAcercaDe.Name = "iconMenuAcercaDe";
+            this.iconMenuAcercaDe.Size = new System.Drawing.Size(307, 26);
+            this.iconMenuAcercaDe.Text = "Acerca de..";
+            this.iconMenuAcercaDe.Click += new System.EventHandler(this.iconMenuAcercaDe_Click);
             // 
-            // acercaDeSistemaClubSocialCosmopolitaToolStripMenuItem
+            // iconMenuAcercaDeSistema
             // 
-            this.acercaDeSistemaClubSocialCosmopolitaToolStripMenuItem.Name = "acercaDeSistemaClubSocialCosmopolitaToolStripMenuItem";
-            this.acercaDeSistemaClubSocialCosmopolitaToolStripMenuItem.Size = new System.Drawing.Size(303, 22);
-            this.acercaDeSistemaClubSocialCosmopolitaToolStripMenuItem.Text = "Acerca de Sistema Club Social Cosmopolita";
-            this.acercaDeSistemaClubSocialCosmopolitaToolStripMenuItem.Click += new System.EventHandler(this.acercaDeSistemaClubSocialCosmopolitaToolStripMenuItem_Click);
+            this.iconMenuAcercaDeSistema.IconChar = FontAwesome.Sharp.IconChar.Navicon;
+            this.iconMenuAcercaDeSistema.IconColor = System.Drawing.Color.Black;
+            this.iconMenuAcercaDeSistema.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconMenuAcercaDeSistema.IconSize = 20;
+            this.iconMenuAcercaDeSistema.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.iconMenuAcercaDeSistema.Name = "iconMenuAcercaDeSistema";
+            this.iconMenuAcercaDeSistema.Size = new System.Drawing.Size(307, 26);
+            this.iconMenuAcercaDeSistema.Text = "Acerca de Sistema Club Social Cosmopolita";
+            this.iconMenuAcercaDeSistema.Click += new System.EventHandler(this.iconMenuItem3_Click);
             // 
             // BottomToolStripPanel
             // 
@@ -507,35 +530,23 @@
             this.modoOsToolStripMenuItem.Text = "Modo oscuro";
             this.modoOsToolStripMenuItem.Click += new System.EventHandler(this.modoOsToolStripMenuItem_Click);
             // 
-            // iconMenuItem1
+            // pbxLogoClub
             // 
-            this.iconMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.iconMenuItem2});
-            this.iconMenuItem1.IconChar = FontAwesome.Sharp.IconChar.DoorClosed;
-            this.iconMenuItem1.IconColor = System.Drawing.Color.DarkOliveGreen;
-            this.iconMenuItem1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconMenuItem1.IconSize = 20;
-            this.iconMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.iconMenuItem1.Name = "iconMenuItem1";
-            this.iconMenuItem1.Size = new System.Drawing.Size(61, 24);
-            this.iconMenuItem1.Text = "Salir";
-            // 
-            // iconMenuItem2
-            // 
-            this.iconMenuItem2.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
-            this.iconMenuItem2.IconColor = System.Drawing.Color.ForestGreen;
-            this.iconMenuItem2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconMenuItem2.IconSize = 20;
-            this.iconMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.iconMenuItem2.Name = "iconMenuItem2";
-            this.iconMenuItem2.Size = new System.Drawing.Size(184, 26);
-            this.iconMenuItem2.Text = "Salir del sistema";
+            this.pbxLogoClub.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pbxLogoClub.Image = ((System.Drawing.Image)(resources.GetObject("pbxLogoClub.Image")));
+            this.pbxLogoClub.Location = new System.Drawing.Point(300, 186);
+            this.pbxLogoClub.Name = "pbxLogoClub";
+            this.pbxLogoClub.Size = new System.Drawing.Size(89, 106);
+            this.pbxLogoClub.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxLogoClub.TabIndex = 4;
+            this.pbxLogoClub.TabStop = false;
             // 
             // FrmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(707, 404);
+            this.Controls.Add(this.pbxLogoClub);
             this.Controls.Add(this.StsBarraDeEstado);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -553,6 +564,7 @@
             this.StsBarraDeEstado.ResumeLayout(false);
             this.StsBarraDeEstado.PerformLayout();
             this.CmsMenuContextual.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogoClub)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -582,10 +594,6 @@
         private ToolStripMenuItem resumenDeCuentaToolStripMenuItem;
         private ToolStripMenuItem cuotasSocietariasToolStripMenuItem1;
         private ToolStripMenuItem cuotasDeDisciplinasToolStripMenuItem1;
-        private ToolStripMenuItem salirToolStripMenuItem;
-        private ToolStripMenuItem salirDelSistemaToolStripMenuItem;
-        private ToolStripMenuItem acercaDeToolStripMenuItem;
-        private ToolStripMenuItem acercaDeSistemaClubSocialCosmopolitaToolStripMenuItem;
         private ToolStripPanel BottomToolStripPanel;
         private ToolStripPanel TopToolStripPanel;
         private ToolStripPanel RightToolStripPanel;
@@ -611,7 +619,10 @@
         private ToolStripMenuItem listado2ToolStripMenuItem;
         private ToolStripMenuItem impresiónListaDeSociosToolStripMenuItem;
         private ToolStripMenuItem impresiónListadoDeActividadesToolStripMenuItem;
-        private FontAwesome.Sharp.IconMenuItem iconMenuItem1;
-        private FontAwesome.Sharp.IconMenuItem iconMenuItem2;
+        private FontAwesome.Sharp.IconMenuItem iconMenuSalir;
+        private FontAwesome.Sharp.IconMenuItem iconMenuSalirDelSistema;
+        private FontAwesome.Sharp.IconMenuItem iconMenuAcercaDe;
+        private FontAwesome.Sharp.IconMenuItem iconMenuAcercaDeSistema;
+        private PictureBox pbxLogoClub;
     }
 }
