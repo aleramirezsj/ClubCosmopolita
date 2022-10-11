@@ -15,5 +15,9 @@ namespace CosmopolitaWeb.Data
         }
 
         public DbSet<CosmopolitaWeb.Models.Socio> Socios { get; set; }
+
+        public DbSet<CosmopolitaWeb.Models.Actividad> Actividades { get; set; }
+
+        public DbSet<CosmopolitaWeb.Models.Usuario> Usuarios { get; set; }
     }
 }
