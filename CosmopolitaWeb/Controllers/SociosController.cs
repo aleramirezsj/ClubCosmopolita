@@ -22,7 +22,7 @@ namespace CosmopolitaWeb.Controllers
         // GET: Socios
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Socio.ToListAsync());
+            return View(await _context.Socios.ToListAsync());
         }
 
         // GET: Socios/Details/5
@@ -33,7 +33,7 @@ namespace CosmopolitaWeb.Controllers
                 return NotFound();
             }
 
-            var socio = await _context.Socio
+            var socio = await _context.Socios
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (socio == null)
             {
@@ -73,7 +73,7 @@ namespace CosmopolitaWeb.Controllers
                 return NotFound();
             }
 
-            var socio = await _context.Socio.FindAsync(id);
+            var socio = await _context.Socios.FindAsync(id);
             if (socio == null)
             {
                 return NotFound();
@@ -124,7 +124,7 @@ namespace CosmopolitaWeb.Controllers
                 return NotFound();
             }
 
-            var socio = await _context.Socio
+            var socio = await _context.Socios
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (socio == null)
             {
@@ -139,15 +139,15 @@ namespace CosmopolitaWeb.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var socio = await _context.Socio.FindAsync(id);
-            _context.Socio.Remove(socio);
+            var socio = await _context.Socios.FindAsync(id);
+            _context.Socios.Remove(socio);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool SocioExists(int id)
         {
-            return _context.Socio.Any(e => e.Id == id);
+            return _context.Socios.Any(e => e.Id == id);
         }
     }
 }

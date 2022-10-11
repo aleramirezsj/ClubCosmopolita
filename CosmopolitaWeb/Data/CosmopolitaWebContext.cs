@@ -14,6 +14,6 @@ namespace CosmopolitaWeb.Data
         {
         }
 
-        public DbSet<CosmopolitaWeb.Models.Socio> Socio { get; set; }
+        public DbSet<CosmopolitaWeb.Models.Socio> Socios { get; set; }
     }
 }
