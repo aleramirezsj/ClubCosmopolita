@@ -1,8 +1,10 @@
 ﻿using CosmopolitaWeb.Enums;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +19,7 @@ namespace CosmopolitaWeb.Models
         [Required]
         public int Año { get; set; }
         [Required]
+        [Column(TypeName = "decimal(18,2)")]
         public decimal Monto { get; set; }
         public bool Cobrada { get; set; }
         [Required]

@@ -27,11 +27,11 @@ namespace CosmopolitaWeb
         {
             services.AddControllersWithViews();
 
-            //services.AddDbContext<CosmopolitaWebContext>(options =>
-            //        options.UseSqlServer(Configuration.GetConnectionString("CosmopolitaWebContext")));
-
             services.AddDbContext<CosmopolitaWebContext>(options =>
-                    options.UseMySQL(Configuration.GetConnectionString("CosmopolitaWebContext")));
+                    options.UseSqlServer(Configuration.GetConnectionString("CosmopolitaWebContext")));
+
+            //services.AddDbContext<CosmopolitaWebContext>(options =>
+            //        options.UseMySQL(Configuration.GetConnectionString("CosmopolitaWebContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
