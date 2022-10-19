@@ -4,6 +4,7 @@ using ClubCosmopolita.Utils;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -89,9 +90,13 @@ namespace ClubCosmopolita.Data
         {
             //optionsBuilder.UseSqlServer(@"Data Source =.\SQLEXPRESS; Initial Catalog = CosmopolitaContext; User Id = sa; Password = 123; MultipleActiveResultSets = True");
             //optionsBuilder.UseSqlServer(@"Server=.\SQLEXPRESS; Database=CosmopolitaContext; Integrated Security=True;");
-            optionsBuilder.UseMySQL("Server=184.175.77.148;Database=smartsof_2doTSDS2022;Uid=smartsof_2doTSDS;Pwd=2doTSDS;");
+            optionsBuilder.UseMySql("Server=184.175.77.148;Database=smartsof_2doTSDS2022;Uid=smartsof_2doTSDS;Pwd=2doTSDS;",ServerVersion.AutoDetect("Server=184.175.77.148;Database=smartsof_2doTSDS2022;Uid=smartsof_2doTSDS;Pwd=2doTSDS;"),
+                    options => options.EnableRetryOnFailure(
+                    maxRetryCount: 5,
+                    maxRetryDelay: System.TimeSpan.FromSeconds(30),
+                    errorNumbersToAdd: null));
             //optionsBuilder.UseMySQL("Server=127.0.0.1;Database=smartsof_2doTSDS2022;Uid=root;Pwd=milton;");
-            
+
 
         }
 
