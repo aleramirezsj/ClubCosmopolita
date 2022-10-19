@@ -31,7 +31,12 @@ namespace CosmopolitaWeb
             //        options.UseSqlServer(Configuration.GetConnectionString("CosmopolitaWebContext")));
 
             services.AddDbContext<CosmopolitaWebContext>(options =>
-                    options.UseMySQL(Configuration.GetConnectionString("CosmopolitaWebContext")));
+                    options.UseMySql(Configuration.GetConnectionString("CosmopolitaWebContext"), ServerVersion.AutoDetect(Configuration.GetConnectionString("CosmopolitaWebContext")),
+                    options => options.EnableRetryOnFailure(
+                    maxRetryCount: 5,
+                    maxRetryDelay: System.TimeSpan.FromSeconds(30),
+                    errorNumbersToAdd: null)
+                ));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
